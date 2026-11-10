@@ -1,6 +1,6 @@
 import type { ModelDefinitionConfig } from "openclaw";
 export declare const SYNAP_PROVIDER_ID = "synap";
-export declare const SYNAP_BASE_URL = "https://pool.linkrra.com/v1";
+export declare const SYNAP_BASE_URL = "https://synap402.com/v1";
 export declare const SYNAP_DEFAULT_MODEL = "gpt-oss-20b";
 export declare const SYNAP_MODELS: ModelDefinitionConfig[];
 export declare function resolveSynapModel(modelId: string): {

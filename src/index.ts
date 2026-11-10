@@ -3,7 +3,7 @@ import { definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";
 import { createProviderApiKeyAuthMethod } from "openclaw/plugin-sdk/provider-auth";
 
 export const SYNAP_PROVIDER_ID = "synap";
-export const SYNAP_BASE_URL = "https://pool.linkrra.com/v1";
+export const SYNAP_BASE_URL = "https://synap402.com/v1";
 export const SYNAP_DEFAULT_MODEL = "gpt-oss-20b";
 
 export const SYNAP_MODELS: ModelDefinitionConfig[] = [

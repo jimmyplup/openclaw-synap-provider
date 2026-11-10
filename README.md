@@ -13,8 +13,8 @@ Set `SYNAP_API_KEY`, then select a model such as `synap/gpt-oss-20b` or
 
 ## Endpoint and data policy
 
-- API base: `https://pool.linkrra.com/v1`
-- Live model catalog: `https://pool.linkrra.com/v1/models`
+- API base: `https://synap402.com/v1`
+- Live model catalog: `https://synap402.com/v1/models`
 - Documentation: `https://synap402.com/docs`
 - Prompts and completions are not retained or used for training.
 
