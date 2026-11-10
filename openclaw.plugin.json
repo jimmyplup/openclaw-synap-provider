@@ -1,0 +1,107 @@
+{
+  "id": "synap",
+  "name": "Synap Provider",
+  "description": "OpenAI-compatible inference from Synap by Linkrra.",
+  "categories": ["models"],
+  "activation": {
+    "onStartup": false
+  },
+  "providers": ["synap"],
+  "modelCatalog": {
+    "discovery": {
+      "synap": "static"
+    },
+    "providers": {
+      "synap": {
+        "baseUrl": "https://pool.linkrra.com/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen/qwen3-vl-30b-a3b-instruct",
+            "name": "Qwen3 VL 30B A3B Instruct",
+            "reasoning": false,
+            "input": ["text"],
+            "contextWindow": 65536,
+            "maxTokens": 65536,
+            "cost": { "input": 0.14, "output": 0.55, "cacheRead": 0, "cacheWrite": 0 }
+          },
+          {
+            "id": "qwen/qwen3-30b-a3b-instruct-2507",
+            "name": "Qwen3 30B A3B Instruct 2507",
+            "reasoning": false,
+            "input": ["text"],
+            "contextWindow": 98304,
+            "maxTokens": 98304,
+            "cost": { "input": 0.081267, "output": 0.2438, "cacheRead": 0, "cacheWrite": 0 }
+          },
+          {
+            "id": "qwen3-coder-30b",
+            "name": "Qwen3 Coder 30B A3B Instruct",
+            "reasoning": false,
+            "input": ["text"],
+            "contextWindow": 98304,
+            "maxTokens": 98304,
+            "cost": { "input": 0.0675, "output": 0.27, "cacheRead": 0, "cacheWrite": 0 }
+          },
+          {
+            "id": "meta/muse-glimmer-30b",
+            "name": "Muse Glimmer 30B",
+            "reasoning": true,
+            "input": ["text"],
+            "contextWindow": 131072,
+            "maxTokens": 131072,
+            "cost": { "input": 0.28, "output": 1.1, "cacheRead": 0, "cacheWrite": 0 }
+          },
+          {
+            "id": "gpt-oss-20b",
+            "name": "GPT OSS 20B",
+            "reasoning": true,
+            "input": ["text"],
+            "contextWindow": 65536,
+            "maxTokens": 65536,
+            "cost": { "input": 0.017, "output": 0.085, "cacheRead": 0, "cacheWrite": 0 }
+          },
+          {
+            "id": "gemma-4-26b-a4b-it",
+            "name": "Gemma 4 26B A4B Instruct",
+            "reasoning": false,
+            "input": ["text"],
+            "contextWindow": 32768,
+            "maxTokens": 32768,
+            "cost": { "input": 0.04, "output": 0.21, "cacheRead": 0, "cacheWrite": 0 }
+          }
+        ]
+      }
+    }
+  },
+  "setup": {
+    "providers": [
+      {
+        "id": "synap",
+        "envVars": ["SYNAP_API_KEY"]
+      }
+    ]
+  },
+  "providerAuthChoices": [
+    {
+      "provider": "synap",
+      "method": "api-key",
+      "choiceId": "synap-api-key",
+      "appGuidedSecret": true,
+      "choiceLabel": "Synap API key",
+      "choiceHint": "OpenAI-compatible inference",
+      "groupId": "synap",
+      "groupLabel": "Synap",
+      "groupHint": "Models hosted by Linkrra",
+      "optionKey": "synapApiKey",
+      "cliFlag": "--synap-api-key",
+      "cliOption": "--synap-api-key <key>",
+      "cliDescription": "Synap API key"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
